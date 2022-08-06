@@ -19,7 +19,7 @@ def create_product(request):
     }
     return render(request,"new_product.html", context=context)
 
-def list_products(request):
+def products_list(request):
     products = Products.objects.all()
     context = {
         "products" : products
