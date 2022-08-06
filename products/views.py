@@ -7,7 +7,7 @@ def create_product(request):
         style = "Lager",
         alcohol_volume = 6,
         IBU = 4,
-        description = "Es una cerveza con una combinación de lúpulos patagónicos y un blend de finas maltas que generan su color rojizo,un delicado aroma y un amargor apacible que permite dar a luz a un tostado delicioso./n Ideal para acompañar carnes asadas y pastas con salsas especiadas..",
+        description = "Es una cerveza con una combinación de lúpulos patagónicos y un blend de finas maltas que generan su color rojizo,un delicado aroma y un amargor apacible que permite dar a luz a un tostado delicioso.",
         malt = "Caramelo",
         hop = "Hercules",
         price = 480,

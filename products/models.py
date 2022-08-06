@@ -5,7 +5,7 @@ class Products(models.Model):
     style = models.CharField (max_length=50,null=True,blank=True)
     alcohol_volume = models.FloatField (max_length=2,null=True,blank=True)
     IBU = models.FloatField (max_length=2,null=True,blank=True)
-    description = models.CharField (max_length=500,null=True,blank=True)
+    description = models.CharField (max_length=2500,null=True,blank=True)
     malt = models.CharField (max_length=50,null=True,blank=True)
     hop = models.CharField (max_length=50,null=True,blank=True)
     price = models.FloatField (default=True, null=True,blank=True)
