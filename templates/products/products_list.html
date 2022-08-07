@@ -46,14 +46,18 @@
 
     {% for product in products %}
 
-    <h1>Nombre :{{product.name}}</h1>
-    <h2>Estilo : {{product.style}}</h2>
-    <h3>Alc : {{product.alcohol_volume}} - IBU : {{product.IBU}}</h3>
-    <h4>Descripción : {{product.description}}</h4>
-    <!-- Atención, no se muestra la descripcion en front-- corregir -->
-    <h5>Malta : {{product.malt}} - Lúpulo : {{product.hop}}</h5>
-    <h6>Precio : {{product.price}}
-    <h7>Stock : {{product.is_active}}</h7>
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{product.name}} - {{product.style}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <p class="card-text">Malta : {{product.malt}} - Lúpulo : {{product.hop}}</p>
+            <a href="#" class="btn btn-primary">Agregar</a>
+        </div>
+    </div>
+
+    <h2>Precio : {{product.price}}</h2>
+    <h3>Stock : {{product.is_active}}</h3>
 
 {% endfor %}
 
@@ -65,15 +69,3 @@
 </html>
 
 
-{% for product in products %}
-
-    <h1>Nombre :{{product.name}}</h1>
-    <h2>Estilo : {{product.style}}</h2>
-    <h3>Alc : {{product.alcohol_volume}} - IBU : {{product.IBU}}</h3>
-    <h4>Descripción : {{product.description}}</h4>
-    <!-- Atención, no se muestra la descripcion en front-- corregir -->
-    <h5>Malta : {{product.malt}} - Lúpulo : {{product.hop}}</h5>
-    <h6>Precio : {{product.price}}
-    <h7>Stock : {{product.is_active}}</h7>
-
-{% endfor %}
