@@ -1,0 +1,16 @@
+{% extends 'template_base.html' %}
+
+{% block titulo %}
+    Quienes Somos
+{% endblock %}
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{new_article.title}}</h5>
+        <p class="card-text">{{new_article.description_1}}</p>
+        <p class="card-text">{{new_article.description_2}}</p>
+        <p class="card-text">{{new_article.team}}</p>
+        <p class="card-text">Nuestro equipo: {{new_article.author}}</p>
+    </div>
+</div>
