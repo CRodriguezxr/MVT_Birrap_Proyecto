@@ -1,8 +1,33 @@
-<h1>Nombre : {{new_botella_1l.name}}</h1>
+{% extends 'template_base.html' %}
+
+{% block titulo %}
+    Agregar birra
+{% endblock %}
+
+
+{% block listado_de_cervezas %}
+
+
+<form action="" method = 'POST'>
+{% csrf_token %}
+
+<table>
+
+    {{form.as_table}}
+
+</table>
+
+<p><input type="submit" value="Enviar"></p>
+
+</form>
+
+{% endblock %}
+<!-- <h1>Nombre : {{new_botella_1l.name}}</h1>
 <h2>Estilo : {{new_botella_1l.style}}</h2>
 <h3>Alc : {{new_botella_1l.alcohol_volume}} - IBU : {{new_botella_1l.IBU}}</h3>
-<h4>Descripción : {{new_botella_1l.description}}</h4>
+<h4>Descripción : {{new_botella_1l.description}}</h4> -->
 <!-- Atención, no se muestra la descripcion en front-- corregir -->
-<h5>Malta : {{new_botella_1l.malt}} - Lúpulo : {{new_botella_1l.hop}}</h5>
+<!-- <h5>Malta : {{new_botella_1l.malt}} - Lúpulo : {{new_botella_1l.hop}}</h5>
 <h6>Precio : {{new_botella_1l.price}}
-<h7>Stock : {{new_botella_1l.is_active}}</h7>
+<h7>Stock : {{new_botella_1l.is
+    
