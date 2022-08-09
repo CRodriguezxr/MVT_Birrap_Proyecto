@@ -1,22 +1,8 @@
-{% extends "template_base.html" %}
-
-
-{% block titulo%}
-    Carga de Cervezas
-{% endblock %}
-
-
-{% block listado_de_cervezas %}
-
-<form action="" method="POST">
-{% csrf_token %}
-
-    <table>
-        {{form.as_table}}
-    </table>
-     <input type="submit" value="enviar">
-</form>
-
-
-
-{% endblock %}
+<h1>Nombre : {{new_product.name}}</h1>
+<h2>Estilo : {{new_product.style}}</h2>
+<h3>Alc : {{new_product.alcohol_volume}} - IBU : {{new_product.IBU}}</h3>
+<h4>Descripción : {{new_product.description}}</h4>
+<!-- Atención, no se muestra la descripcion en front-- corregir -->
+<h5>Malta : {{new_product.malt}} - Lúpulo : {{new_product.hop}}</h5>
+<h6>Precio : {{new_product.price}}
+<h7>Stock : {{new_product.is_active}}</h7>

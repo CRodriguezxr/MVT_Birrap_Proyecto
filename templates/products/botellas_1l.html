@@ -6,7 +6,7 @@
 
 {% block listado_de_cervezas %}
 
-
+{% for botella in botellas_1l %}
 
 
 
@@ -22,9 +22,9 @@
     </div>
 </div>
 
-<h2>Precio : {{botella.price}}</h2>
-<h3>Stock : {{botella.is_active}}</h3>
+<h2>Precio : {{product.price}}</h2>
+<h3>Stock : {{product.is_active}}</h3>
 
-
+{% endfor %}
 
 {% endblock %}
