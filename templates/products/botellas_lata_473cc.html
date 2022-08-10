@@ -1,10 +1,25 @@
 {% extends 'template_base.html' %}
 
 {% block titulo %}
-    Nuestras Cervezas
+    Nuestras Latas de 473cc
 {% endblock %}
 
+
+{% block formulario_busqueda %}
+<form class="form-inline my-2 my-lg-0" action ="/products/buscar_lata_473cc" method="GET">
+    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+</form>
+
+{% endblock %}
+
+
+
 {% block listado_de_cervezas %}
+
+
+
+<h2 class="text-center">Cervezas en lata de 473cc</h2>
 
 {% for botella in botellas_lata_473cc %}
 
@@ -14,16 +29,17 @@
 <div class="card" style="width: 18rem;">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">{{botella.name}} - {{botella.style}}</h5>
+        <h3 class="card-title">{{botella.name}} - {{botella.style}}</h3>
         <p class="card-text">{{botella.description}}</p>
-        <p class="card-text">Malta : {{botella.malt}} - Lúpulo : {{botella.hop}}</p>
+        <p class="card-text">Malta : {{botella.malt}} <br> Lúpulo : {{botella.hop}}</p>
+        <h5>Precio : {{botella.price}}</h5>
+        <h5>Stock : {{botella.is_active}}</h5>
         <a href="#" class="btn btn-primary">Agregar</a>
         <a href="#" class="btn btn-danger">Eliminar</a>
     </div>
 </div>
 
-<h2>Precio : {{product.price}}</h2>
-<h3>Stock : {{product.is_active}}</h3>
+
 
 {% endfor %}
 

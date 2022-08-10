@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render, redirect
 from products.models import Products,Botella_1l,Botella_lata_473cc
 from products.forms import Formulario_botellas1lt, Formulario_latas473cc, Formulario_botellas500cc
@@ -128,8 +129,20 @@ def buscar_birra500(request):
     context = {'products':products}
     return render(request, 'products/buscar_birra500.html', context=context)
 
+
+
+
 def buscar_birra1l(request):
-    search = request.GET['search']
-    products = Botella_1l.objects.filter(name__icontains=search)
-    context = {'products':products}
-    return render(request, 'products/buscar_birra1l.html', context=context) 
+    search= request.GET['search']
+    botellas_1l= Botella_1l.objects.filter(name__icontains= search)
+    context = {'botellas_1l':botellas_1l}
+    return render(request, 'products/buscar_birra1l.html', context=context)
+
+
+def buscar_lata_473cc(request):
+    search= request.GET['search']
+    latas_473cc= Botella_lata_473cc.objects.filter(name__icontains= search)
+    context = {'latas_473cc':latas_473cc}
+    return render(request, 'products/buscar_lata_473cc.html', context=context)
+    
+

@@ -1,6 +1,6 @@
 from unicodedata import name
 from django.urls import path
-from products.views import products_list,crear_botella_500cc,lista_botella_1l,crear_botella1l,crear_lata_473cc,lista_botella_lata_473cc, buscar_birra500
+from products.views import products_list,crear_botella_500cc,lista_botella_1l,crear_botella1l,crear_lata_473cc,lista_botella_lata_473cc, buscar_birra500,buscar_birra1l,buscar_lata_473cc
 
 urlpatterns = [
     path('crear_botella_500/',crear_botella_500cc, name='create_products'),
@@ -9,5 +9,7 @@ urlpatterns = [
     path("crear_botella1l/",crear_botella1l,name="crear_botella1l"),
     path("crear_botella_lata_473cc/",crear_lata_473cc,name="crear_botella_lata_473cc"),
     path("lista_botella_lata_473cc/",lista_botella_lata_473cc,name="lista_botella_lata_473cc"),
-    path("search_product/", buscar_birra500, name='search_products')
+    path("search_product/", buscar_birra500, name='search_products'),
+    path("buscar_birra1l/", buscar_birra1l, name='buscar_birra1l'),
+    path("buscar_lata_473cc/", buscar_lata_473cc, name='buscar_lata_473cc'),
 ]

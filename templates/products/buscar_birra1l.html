@@ -1,33 +1,41 @@
 {% extends 'template_base.html' %}
 
 {% block titulo %}
-    Busqueda Cervezas
+    Nuestras Cervezas de 1lt
+{% endblock %}
+
+{% block formulario_busqueda %}
+<form class="form-inline my-2 my-lg-0" action ="/products/buscar_birra1l/" method="GET">
+    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name = 'search'>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+</form>
+
 {% endblock %}
 
 
 {% block listado_de_cervezas %}
 
 
-
-{% for botella in botellas_1l %}
-
+<h2 class="text-center">Botellas de 1lt</h2>
 
 
 
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{botella.name}} - {{botella.style}}</h5>
-        <p class="card-text">{{botella.description}}</p>
-        <p class="card-text">Malta : {{botella.malt}} - Lúpulo : {{botella.hop}}</p>
-        <a href="#" class="btn btn-primary">Agregar</a>
-        <a href="#" class="btn btn-danger">Eliminar</a>
+{% for botella_1l in botellas_1l %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">{{botella_1l.name}} - {{botella_1l.style}}</h4>
+            <p class="card-text">{{botella_1l.description}}</p>
+            <p class="card-text">Malta : {{botella_1l.malt}} <br> Lúpulo : {{botella_1l.hop}}</p>
+            <h5>Precio : {{botella_1l.price}}</h5>
+            <h5>Stock : {{botella_1l.is_active}}</h5>
+            <a href="#" class="btn btn-primary">Agregar</a>
+            <a href="#" class="btn btn-danger">Eliminar</a>
+        </div>
     </div>
-</div>
-
-<h2>Precio : {{botella.price}}</h2>
-<h3>Stock : {{botella.is_active}}</h3>
-
+    
 {% endfor %}
+
 
 {% endblock %}
