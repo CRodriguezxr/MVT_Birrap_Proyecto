@@ -47,7 +47,7 @@ def crear_botella1l(request):
              creation_date = form.cleaned_data['creation_date'], 
              is_active = form.cleaned_data['is_active']
         )
-        return redirect(products_list) 
+        return redirect(lista_botella_1l) 
     
    elif request.method == 'GET':
     form = Formulario_botellas1lt()
@@ -98,6 +98,7 @@ def lista_botella_lata_473cc(request):
 
 
 def crear_botella_500cc(request):
+
     if request.method == 'POST':
      form = Formulario_botellas500cc(request.POST)
 
@@ -120,3 +121,15 @@ def crear_botella_500cc(request):
         form = Formulario_botellas500cc()
         context = {'form':form}
         return render(request,"products/new_botella_500cc.html", context=context)
+
+def buscar_birra500(request):
+    search = request.GET['search']
+    products = Products.objects.filter(name__icontains=search)
+    context = {'products':products}
+    return render(request, 'products/buscar_birra500.html', context=context)
+
+def buscar_birra1l(request):
+    search = request.GET['search']
+    products = Botella_1l.objects.filter(name__icontains=search)
+    context = {'products':products}
+    return render(request, 'products/buscar_birra1l.html', context=context) 
