@@ -1,0 +1,23 @@
+{% extends 'template_base.html' %}
+
+{% block titulo %}
+    Eliminar Producto
+{% endblock %}
+
+
+{% block listado_de_cervezas %}
+
+<p>Nombre del producto: {{botellas_1l.name}}</p>
+<p>Descripcion del producto: {{botellas_1l.description}}</p>
+<p>Precio del producto: {{botellas_1l.price}}</p>
+
+
+<form action="" method = 'POST'>
+{% csrf_token %}
+
+
+<p><input type="submit" value="Borrar"></p>
+
+</form>
+
+{% endblock %}

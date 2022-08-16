@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href=>Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -24,29 +25,39 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                
                 <li class="nav-item active">
-                    <a class="nav-link" href="/products/products_list">Donde estamos<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/home/new_article">Acerca de nosotros<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/new_article/create_article/">Acerca de nosotros<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown"
-                        aria-expanded="false">
-                        Nuestras Cervezas
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown"aria-expanded="false">
+                        Lata de 473cc
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../lista_botella_lata_473cc/">Latas 473 cc</a>
+                        <a class="dropdown-item" href="../crear_botella_lata_473cc/">Crear producto</a>          
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Botella de 500cc
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../products_list">Botellas 500cc</a>
+                        <a class="dropdown-item" href="../crear_botella_500/">Crear producto</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Botellas 1lt
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="../lista_botella_1l/">Botellas 1 lts</a>
-                        <a class="dropdown-item" href="../products_list">Botellas 500 cc</a>
-                        <a class="dropdown-item" href="../lista_botella_lata_473cc/">Latas 473 cc</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Combos</a>
+                        <a class="dropdown-item" href="../crear_botella1l/">Crear producto</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href=>Merchandising</a>
-                </li>
             </ul>
+            
             {% block formulario_busqueda %}
             <!-- <form class="form-inline my-2 my-lg-0" action ="/products/search_product/" method="GET">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name = 'search'>

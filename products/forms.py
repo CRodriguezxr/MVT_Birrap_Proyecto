@@ -11,7 +11,7 @@ class Formulario_botellas1lt(forms.Form):
     malt = forms.CharField (max_length=50,)
     hop = forms.CharField (max_length=50)
     price = forms.FloatField ()
-    creation_date = forms.DateField ()
+    creation_date = forms.DateField (widget = forms.SelectDateWidget)
     is_active = forms.BooleanField ()
 
 class Formulario_botellas500cc(forms.Form):
@@ -23,7 +23,7 @@ class Formulario_botellas500cc(forms.Form):
     malt = forms.CharField (max_length=50,)
     hop = forms.CharField (max_length=50)
     price = forms.FloatField ()
-    creation_date = forms.DateField ()
+    creation_date = forms.DateField (widget = forms.SelectDateWidget)
     is_active = forms.BooleanField ()
 
 class Formulario_latas473cc(forms.Form):
@@ -35,5 +35,5 @@ class Formulario_latas473cc(forms.Form):
     malt = forms.CharField (max_length=50,)
     hop = forms.CharField (max_length=50)
     price = forms.FloatField ()
-    creation_date = forms.DateField ()
+    creation_date = forms.DateField (widget = forms.SelectDateWidget)
     is_active = forms.BooleanField ()
